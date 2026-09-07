@@ -25,12 +25,20 @@ flowchart TD
     F[Flight-Time Measurement]
     G[Jump Height Estimate]
 
-    A -->|56 kHz modulated infrared| B
+    A -->| Frequency modulated infrared beams| B
     B --> C
     C --> D
     D --> E
     E --> F
     F --> G
+
+    style A fill:#ffe0b2,stroke:#e65100,stroke-width:2px
+    style B fill:#e1f5fe,stroke:#0277bd,stroke-width:2px
+    style C fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style D fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style E fill:#f3e5f5,stroke:#7b1fa2,stroke-width:2px
+    style F fill:#fff3e0,stroke:#ef6c00,stroke-width:2px
+    style G fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
 ```
 
 ## Current Hardware
