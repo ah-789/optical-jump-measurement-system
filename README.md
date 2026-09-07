@@ -1,5 +1,4 @@
 # optical-jump-measurement-system
-# Optical Jump Measurement System
 
 A custom infrared-based system for measuring athlete flight time and estimating jump height.
 
