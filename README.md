@@ -15,19 +15,23 @@ The project is being developed as an engineering learning project and as an expl
 
 ## Current Architecture
 
-Emitter Array  
-↓  
- Frequency Modulated Infrared beams  
-↓  
-Receiver Array  
-↓  
-ESP32-C3  
-↓  
-Event Timestamping  
-↓  
-Flight-Time Measurement  
-↓  
-Jump Height Estimation
+```mermaid
+flowchart TD
+    A[IR Emitter Array]
+    B[IR Receiver Array]
+    C[ESP32-C3]
+    D[Beam-State Detection]
+    E[Event Timestamping]
+    F[Flight-Time Measurement]
+    G[Jump Height Estimate]
+
+    A -->|56 kHz modulated infrared| B
+    B --> C
+    C --> D
+    D --> E
+    E --> F
+    F --> G
+```
 
 ## Current Hardware
 
