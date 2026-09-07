@@ -19,37 +19,37 @@ The project is being developed as an engineering learning project and as an expl
 flowchart TD
 
     A[IR Emitter Array]:::emitter
-    H[ Frequency Modulated IR Beams]:::beam
+    H[56 kHz Modulated IR Beams]:::beam
     B[IR Receiver Array]:::receiver
     C[ESP32-C3]:::controller
-    D[Beam Detection]:::processing
-    E[Event Timestamping]:::processing
-    F[Flight Time Measurement]:::measurement
-    G[Jump Height Output]:::output
+
+    subgraph PROCESSING[" "]
+        direction LR
+        D[Beam-State Detection]:::processing
+        E[Event Timestamping]:::processing
+        F[Flight-Time Measurement]:::measurement
+
+        D --> E --> F
+    end
+
+    G[Jump Height Estimate]:::output
 
     A --> H
     H --> B
     B --> C
     C --> D
-    D --> E
-    E --> F
     F --> G
 
-    classDef emitter fill:#9A3412,stroke:#FB923C,stroke-width:2px,color:#FFFFFF,font-weight:bold;
-    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-weight:bold,font-size:12;
-    classDef receiver fill:#075985,stroke:#38BDF8,stroke-width:2px,color:#FFFFFF,font-weight:bold;
-    classDef controller fill:#166534,stroke:#4ADE80,stroke-width:2px,color:#FFFFFF,font-weight:bold;
-    classDef processing fill:#6B21A8,stroke:#C084FC,stroke-width:2px,color:#FFFFFF,font-weight:bold;
-    classDef measurement fill:#92400E,stroke:#FBBF24,stroke-width:2px,color:#FFFFFF,font-weight:bold;
-    classDef output fill:#065F46,stroke:#34D399,stroke-width:2px,color:#FFFFFF,font-weight:bold,font-size:18;
+    classDef emitter fill:#9A3412,stroke:#FB923C,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef receiver fill:#075985,stroke:#38BDF8,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef controller fill:#166534,stroke:#4ADE80,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef processing fill:#6B21A8,stroke:#C084FC,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef measurement fill:#92400E,stroke:#FBBF24,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef output fill:#065F46,stroke:#34D399,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
 
-    linkStyle 0 stroke:#EF4444,stroke-width:3px;
-    linkStyle 1 stroke:#EF4444,stroke-width:3px;
-    linkStyle 2 stroke:#94A3B8,stroke-width:2px;
-    linkStyle 3 stroke:#94A3B8,stroke-width:2px;
-    linkStyle 4 stroke:#94A3B8,stroke-width:2px;
-    linkStyle 5 stroke:#94A3B8,stroke-width:2px;
-    linkStyle 6 stroke:#94A3B8,stroke-width:2px;
+    style PROCESSING fill:transparent,stroke:transparent
+    inkStyle 6 stroke:#94A3B8,stroke-width:2px;
 ```
 
 ## Current Hardware
