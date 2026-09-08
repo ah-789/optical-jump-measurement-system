@@ -26,12 +26,12 @@ flowchart TD
 
     subgraph PIPELINE["PROCESSING PIPELINE"]
         direction LR
-        
+
         D[Beam-State Detection]:::processing
         E[Event Timestamping]:::processing
         F[Flight-Time Measurement]:::measurement
 
-        D --> E --> F
+        D ~~~ E ~~~ F
     end
 
     A --> H
