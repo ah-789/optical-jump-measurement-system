@@ -22,9 +22,11 @@ flowchart TD
     H[56 kHz Modulated IR Beams]:::beam
     B[IR Receiver Array]:::receiver
     C[ESP32-C3]:::controller
+    G[Jump Height Estimate]:::output
 
-    subgraph PROCESSING[" "]
+    subgraph PIPELINE["PROCESSING PIPELINE"]
         direction LR
+
         D[Beam-State Detection]:::processing
         E[Event Timestamping]:::processing
         F[Flight-Time Measurement]:::measurement
@@ -32,13 +34,12 @@ flowchart TD
         D --> E --> F
     end
 
-    G[Jump Height Estimate]:::output
-
     A --> H
     H --> B
     B --> C
-    C --> D
-    F --> G
+
+    C --> PIPELINE
+    PIPELINE --> G
 
     classDef emitter fill:#9A3412,stroke:#FB923C,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
@@ -48,7 +49,7 @@ flowchart TD
     classDef measurement fill:#92400E,stroke:#FBBF24,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef output fill:#065F46,stroke:#34D399,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
 
-    style PROCESSING fill:transparent,stroke:transparent
+    style PIPELINE fill:#111827,stroke:#475569,stroke-width:1px,color:#CBD5E1
 ```
 
 ## Current Hardware
