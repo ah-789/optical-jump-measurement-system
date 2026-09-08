@@ -42,7 +42,7 @@ flowchart TD
     PIPELINE --> G
 
     classDef emitter fill:#9A3412,stroke:#FB923C,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
-    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
+    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold,Font-size:12;
     classDef receiver fill:#075985,stroke:#38BDF8,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef controller fill:#166534,stroke:#4ADE80,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef processing fill:#6B21A8,stroke:#C084FC,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
