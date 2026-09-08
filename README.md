@@ -19,18 +19,19 @@ The project is being developed as an engineering learning project and as an expl
 flowchart TD
 
     A[IR Emitter Array]:::emitter
-    H["Frequency Modulated IR <br/> Beams"]:::beam  
+    H["Frequency Modulated IR <br/> Beams"]:::beam
     B[IR Receiver Array]:::receiver
     C[ESP32-C3]:::controller
     G[Jump Height Estimate]:::output
 
     subgraph PIPELINE["PROCESSING PIPELINE"]
         direction LR
-
+        
         D[Beam-State Detection]:::processing
         E[Event Timestamping]:::processing
         F[Flight-Time Measurement]:::measurement
 
+        D --> E --> F
     end
 
     A --> H
