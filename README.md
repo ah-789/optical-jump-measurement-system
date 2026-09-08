@@ -49,7 +49,6 @@ flowchart TD
     classDef output fill:#065F46,stroke:#34D399,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
 
     style PROCESSING fill:transparent,stroke:transparent
-    inkStyle 6 stroke:#94A3B8,stroke-width:2px;
 ```
 
 ## Current Hardware
