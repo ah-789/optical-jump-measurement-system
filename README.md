@@ -19,7 +19,7 @@ The project is being developed as an engineering learning project and as an expl
 flowchart TD
 
     A[IR Emitter Array]:::emitter
-    H[Frequency Modulated IR Beams]:::beam
+    H["Frequency Modulated IR <br/> Beams"]:::beam  
     B[IR Receiver Array]:::receiver
     C[ESP32-C3]:::controller
     G[Jump Height Estimate]:::output
@@ -42,7 +42,7 @@ flowchart TD
     PIPELINE --> G
 
     classDef emitter fill:#9A3412,stroke:#FB923C,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
-    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:15px,font-weight:bold,font-size:12;
+    classDef beam fill:#B91C1C,stroke:#F87171,stroke-width:2px,color:#FFFFFF,font-size:12x,font-weight:bold;
     classDef receiver fill:#075985,stroke:#38BDF8,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef controller fill:#166534,stroke:#4ADE80,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
     classDef processing fill:#6B21A8,stroke:#C084FC,stroke-width:2px,color:#FFFFFF,font-size:17px,font-weight:bold;
