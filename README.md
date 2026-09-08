@@ -31,7 +31,6 @@ flowchart TD
         E[Event Timestamping]:::processing
         F[Flight-Time Measurement]:::measurement
 
-        D --> E --> F
     end
 
     A --> H
